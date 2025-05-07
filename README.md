@@ -49,7 +49,7 @@ poetry install
 
 ### Start the server (VSCode terminal)
 
-```
+```bash
 # Start the server
 poetry run python -m src.adokqlbot.main`
 ```
