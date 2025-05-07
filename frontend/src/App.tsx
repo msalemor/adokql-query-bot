@@ -1,14 +1,16 @@
 import { useState } from 'react'
-//import reactLogo from './assets/react.svg'
-//import viteLogo from '/vite.svg'
 import { AllCommunityModule, ColDef, ModuleRegistry } from 'ag-grid-community';
-// Register all Community features
+
 ModuleRegistry.registerModules([AllCommunityModule]);
 import { AgGridReact } from 'ag-grid-react';
 import axios from 'axios';
 import ReactMarkdown from 'react-markdown';
 import { IoMdSend } from 'react-icons/io';
 import { MdClear } from 'react-icons/md';
+
+// ADO: Organization: project-name Query: select [System.Id], [System.WorkItemType], [System.Title], [System.AssignedTo], [System.State], [System.Tags], [System.Description] from WorkItems where [System.TeamProject] = 'Project' and [System.ChangedDate] > @today - 180 and [System.WorkItemType] in ('Task') and [System.State] in ('Active') and [System.AreaPath] = 'Path\'
+// "select [System.Id], [System.WorkItemType], [System.Title], [System.AssignedTo], [System.State], [System.Tags], [System.Description] from WorkItems where [System.TeamProject] = 'Project' and [System.ChangedDate] > @today - 180 and [System.WorkItemType] in ('Task') and [System.State] in ('Active') and [System.AreaPath] = 'Path\'"
+// Cluster: https://help.kusto.windows.net/ Database: SecurityLogs Query: Email | take 10
 
 const Settings = {
   prompt: "",
@@ -30,10 +32,6 @@ interface ServerResponse {
   columns: any[];
   rows: any[];
 }
-
-// ADO: Organization: project-name Query: select [System.Id], [System.WorkItemType], [System.Title], [System.AssignedTo], [System.State], [System.Tags], [System.Description] from WorkItems where [System.TeamProject] = 'Project' and [System.ChangedDate] > @today - 180 and [System.WorkItemType] in ('Task') and [System.State] in ('Active') and [System.AreaPath] = 'Path\'
-// "select [System.Id], [System.WorkItemType], [System.Title], [System.AssignedTo], [System.State], [System.Tags], [System.Description] from WorkItems where [System.TeamProject] = 'Project' and [System.ChangedDate] > @today - 180 and [System.WorkItemType] in ('Task') and [System.State] in ('Active') and [System.AreaPath] = 'Path\'"
-// Cluster: https://help.kusto.windows.net/ Database: SecurityLogs Query: Email | take 10
 
 interface IMessage {
   role: string;
