@@ -17,6 +17,7 @@ Frontend ([App.tsx](frontend/src/App.tsx)):
 - React
 - Vite
 - TailwindCSS
+- Axios
 - React Markdown
 - Ag Data Grid
 - React Icons
