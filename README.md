@@ -9,7 +9,7 @@ Server ([main.py](src/adokqlbot/main.py)):
 - Poetry
 - FastAPI
 - Uvicorn
-- OpenAI
+- OpenAI SDK
 - Python-DotEnv
 
 Frontend ([App.tsx](frontend/src/App.tsx)):
