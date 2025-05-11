@@ -1,4 +1,4 @@
-FROM python:3.11-buster AS builder
+FROM python:3.11-bullseye AS builder
 
 RUN pip install poetry
 
@@ -21,7 +21,7 @@ RUN poetry install --no-root --no-cache
 
 #ENTRYPOINT ["poetry","run","python", "-m", "src.adokqlbot.main"]
 
-FROM python:3.11-slim-buster AS runtime
+FROM python:3.11-slim-bullseye AS runtime
 
 ENV VIRTUAL_ENV=/app/.venv \
     PATH="/app/.venv/bin:$PATH"
