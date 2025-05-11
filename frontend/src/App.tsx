@@ -22,11 +22,12 @@ const Settings = {
   database: "",
 }
 
-const BASE_URI = "http://localhost:8000/api"
-const ADO_URI = `${BASE_URI}/ado`
-const KQL_URI = `${BASE_URI}/kql`
-const KQLDB_URI = `${BASE_URI}/kqldb`
-const COMPLETION_URI = `${BASE_URI}/completion`
+//const BASE: string = (window as any).BASE_URL
+const BASE_URI = import.meta.env.VITE_BASE_URI;
+const ADO_URI = `${BASE_URI}/api/ado`
+const KQL_URI = `${BASE_URI}/api/kql`
+const KQLDB_URI = `${BASE_URI}/api/kqldb`
+const COMPLETION_URI = `${BASE_URI}/api/completion`
 
 interface ServerResponse {
   columns: any[];

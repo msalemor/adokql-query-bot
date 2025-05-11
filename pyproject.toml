@@ -1,9 +1,9 @@
 [project]
-name = "insights"
+name = "adokqlbot"
 version = "0.1.0"
-description = ""
+description = "ADO/KQL Chatbot"
 authors = [
-    {name = "Your Name",email = "you@example.com"}
+    {name = "Alex Morales",email = "am8850mia@gmail.com"}
 ]
 readme = "README.md"
 requires-python = ">=3.11,<=4.0.0"
