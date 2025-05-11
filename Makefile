@@ -10,5 +10,7 @@ build-ui:
 run: build-ui
 	poetry run python -m src.adokqlbot.main
 
+VERSION=0.0.1
+TAG=am8850/adokqlbot:$(VERSION)
 docker-build: build-ui
-	docker build -t am8850/adokqlbot:0.01 .
+	docker build -t $(TAG) .
